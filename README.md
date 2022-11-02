@@ -1,10 +1,10 @@
-# 019 Lists
+# 020 Display
 
-[![019 Lists](https://img.youtube.com/vi/tlScAMXZj2k/0.jpg)](https://www.youtube.com/watch?v=tlScAMXZj2k)
+[![020 Display](https://img.youtube.com/vi/S9SGnWGTL24/0.jpg)](https://www.youtube.com/watch?v=S9SGnWGTL24)
 
 The `index.html` file
-- should style `roman-numeral` class to display list items with an upper case roman numeral
-- should style `bullet-point` class to display list items with a the outline of a circle
+- should style `same-line` class to display on the same line as the element above it
+- should style `next-line` class to display on the next line after the element above it
 
 Resources:
-- https://www.w3schools.com/cssref/pr_list-style-type.asp
+- https://www.w3schools.com/cssref/pr_class_display.asp

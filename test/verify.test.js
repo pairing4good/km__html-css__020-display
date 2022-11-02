@@ -36,24 +36,25 @@ afterEach(async () => {
   await browser.close();
 });
 
-describe('the roman-numeral list', () => {
-  it('should display items with an upper case roman numeral', async () => {
-    const listStyleType = await page.$eval('ul[class="roman-numeral"]', (list) => {
-      let style = window.getComputedStyle(list);
-      return style.getPropertyValue('list-style-type')
+describe('the div same-line', () => {
+  it('should display on the same line as the element above it', async () => {
+    const display = await page.$eval('div[class="same-line"]', (div) => {
+      let style = window.getComputedStyle(div);
+      return style.getPropertyValue('display');
     });
-      
-    expect(listStyleType).toBe('upper-roman')
+    
+    expect(display).toContain('inline');
   });
 });
 
-describe('the bullet-point list', () => {
-  it('should display items with a the outline of a circle', async () => {
-    const listStyleType = await page.$eval('ul[class="bullet-point"]', (list) => {
-      let style = window.getComputedStyle(list);
-      return style.getPropertyValue('list-style-type')
+describe('the span next-line', () => {
+  it('should display on the next line after the element above it', async () => {
+    const display = await page.$eval('span[class="next-line"]', (span) => {
+      let style = window.getComputedStyle(span);
+      return style.getPropertyValue('display');
     });
       
-    expect(listStyleType).toBe('circle')
+    expect(display).toBe('block');
   });
-})
+});
+
